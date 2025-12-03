@@ -14,7 +14,7 @@ import type { Env } from '../types'
 
 interface Clients {
   publicClient: PublicClient<HttpTransport, Chain>
-  walletClient: WalletClient
+  walletClient: WalletClient<HttpTransport, Chain>
 }
 
 export function createClients(env: Env): Clients {
