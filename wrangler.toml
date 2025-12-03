@@ -1,0 +1,14 @@
+name = "mock-usdc-faucet"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[vars]
+# Non-secret defaults (override in dashboard or .dev.vars)
+USDC_MINT_AMOUNT = "1000"
+DAI_MINT_AMOUNT = "1000"
+
+# Secrets (set via wrangler secret put):
+# - PRIVATE_KEY
+# - SEPOLIA_RPC_URL
+# - SEPOLIA_RPC_URL_FALLBACK
+# - ALLOWED_ORIGINS
