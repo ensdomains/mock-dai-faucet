@@ -1,7 +1,7 @@
 import type { Context, Next } from 'hono'
 import type { Env } from '../types'
 
-function matchesPattern(origin: string, pattern: string): boolean {
+export function matchesPattern(origin: string, pattern: string): boolean {
   // Convert wildcard pattern to regex
   // *.example.com -> matches any subdomain
   // localhost:* -> matches any port
