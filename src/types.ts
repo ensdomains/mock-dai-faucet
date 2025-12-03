@@ -16,7 +16,7 @@ export interface MintResult {
 export interface Env {
   PRIVATE_KEY: string
   SEPOLIA_RPC_URL: string
-  SEPOLIA_RPC_URL_FALLBACK: string
+  SEPOLIA_RPC_URL_FALLBACK?: string
   ALLOWED_ORIGINS: string
   USDC_MINT_AMOUNT: string
   DAI_MINT_AMOUNT: string

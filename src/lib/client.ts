@@ -12,10 +12,12 @@ import type { Env } from '../types'
 export function createClients(env: Env) {
   const account = privateKeyToAccount(env.PRIVATE_KEY as Hex)
 
-  const transport = fallback([
-    http(env.SEPOLIA_RPC_URL, { timeout: 30_000 }),
-    http(env.SEPOLIA_RPC_URL_FALLBACK, { timeout: 30_000 }),
-  ])
+  const transports = [http(env.SEPOLIA_RPC_URL, { timeout: 30_000 })]
+  if (env.SEPOLIA_RPC_URL_FALLBACK) {
+    transports.push(http(env.SEPOLIA_RPC_URL_FALLBACK, { timeout: 30_000 }))
+  }
+
+  const transport = fallback(transports)
 
   const publicClient = createPublicClient({
     chain: sepolia,
