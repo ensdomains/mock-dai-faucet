@@ -1,0 +1,6 @@
+PRIVATE_KEY=0x_your_private_key_here
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/your-key
+SEPOLIA_RPC_URL_FALLBACK=https://sepolia.infura.io/v3/your-key
+ALLOWED_ORIGINS=localhost:*,*.ens.domains
+USDC_MINT_AMOUNT=1000
+DAI_MINT_AMOUNT=1000
